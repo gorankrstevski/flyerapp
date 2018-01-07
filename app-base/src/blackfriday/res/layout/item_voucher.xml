@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/voucher_cardview"
+    android:layout_width="@dimen/voucher_item_width"
+    android:layout_height="170dp"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:stateListAnimator="@drawable/view_elevation"
+    android:transitionName="cardview"
+    style="@style/cardForeground"
+    card_view:cardBackgroundColor="#fff"
+    card_view:cardCornerRadius="5dp"
+    card_view:elevation="@dimen/voucher_item_elevation">
+
+    <RelativeLayout
+        android:id="@+id/voucher_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.cuponation.android.ui.view.AutoResizeTextView
+            android:id="@+id/new_tag"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="@string/cn_app_new_tag"
+            android:lines="1"
+            android:textSize="@dimen/new_tag_font_size"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:background="@color/colorPrimaryTransparent"
+            android:gravity="bottom|center_horizontal"
+            android:rotation="-45"
+            android:layout_marginLeft="-28dp"
+            android:layout_marginTop="-20dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="9dp"
+            android:paddingBottom="2dp"
+            />
+
+        <TextView
+            android:text="15% OFFERTS BLA"
+            android:id="@+id/voucher_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/vhv_title_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="bottom|center_horizontal"
+            android:lines="2"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_dark"
+            android:textSize="@dimen/voucher_item_title_font_size"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.FontPath.Bold"
+             />
+
+        <TextView
+            android:text="CODE"
+            android:id="@+id/voucher_type"
+            style="@style/VoucherTypeBadge"
+            android:layout_below="@+id/voucher_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/voucher_item_type_margin_top"
+            android:background="@drawable/code_bg"
+            />
+
+        <TextView
+            android:id="@+id/voucher_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voucher_type"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/voucher_item_type_margin_top"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="2"
+            android:textColor="@color/text_color_dark"
+            android:visibility="gone"
+            />
+
+        <View
+            android:id="@+id/perforation_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/voucher_category"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="@dimen/voucher_item_type_margin_top"
+            android:visibility="invisible"
+            android:background="@color/background_color" />
+
+        <TextView
+            android:id="@+id/voucher_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/perforation_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/cn_app_verified"
+            android:textColor="@color/text_color_dark_gray" />
+
+        <ImageView
+            android:id="@+id/voucher_checkmark"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@id/voucher_status"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/voucher_status"
+            android:tint="@color/text_color_dark_gray"
+            app:srcCompat="@drawable/ic_check_black_24dp" />
+
+        <TextView
+            android:id="@+id/voucher_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/perforation_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_color_dark_gray"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/voucher_bookmark"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/voucher_text"
+            android:paddingBottom="12dp"
+            android:paddingTop="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            app:srcCompat="@drawable/ic_bookmark_24" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

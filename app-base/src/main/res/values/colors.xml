@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EF5360</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#EF5360</color>
+    <color name="colorSecondary">#f8565c</color>
+
+    <color name="colorPrimaryTransparent">#33f8565c</color>
+
+    <color name="background_color">#f3f3f3</color>
+    <color name="background_color_darker">#e0dedf</color>
+    <color name="background_color_disabled">#eeeeee</color>
+
+    <color name="search_bar_background">@android:color/white</color>
+    <color name="search_bar_field">#ececec</color>
+    <color name="search_bar_hint">#828282</color>
+
+    <color name="separator_color">#dbdbdb</color>
+    <color name="separator_color_settings">#e5e5e5</color>
+
+    <color name="text_color_dark">#312f30</color>
+    <color name="text_color_light_gray">#9a9a9a</color>
+    <color name="text_color_dark_gray">#666666</color>
+    <color name="text_color_dark_trans">#62312f30</color>
+
+    <color name="search_shadow_layout">#50000000</color>
+
+    <color name="code_badge_text_color">@android:color/white</color>
+    <color name="deal_badge_text_color">@android:color/white</color>
+    <color name="deal_text_color">@color/text_color_dark</color>
+    <color name="code_text_color">@color/text_color_dark</color>
+
+    <!-- Light Theme -->
+    <color name="search_light_background">#fffafafa</color>
+    <color name="search_light_icon">#8a000000</color>
+    <color name="search_light_text">#de000000</color>
+    <color name="search_light_hint">#80000000</color>
+    <color name="search_light_text_highlight">#62000000</color>
+
+    <!-- Dark Theme -->
+    <color name="search_dark_background">#ff303030</color>
+    <color name="search_dark_icon">#b3ffffff</color>
+    <color name="search_dark_text">#ffffffff</color>
+    <color name="search_dark_hint">#80ffffff</color>
+    <color name="search_dark_text_highlight">#62ffffff</color>
+
+</resources>

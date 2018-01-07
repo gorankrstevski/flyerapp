@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories_uk">
+        <item>Photo \u0026 Print</item>
+        <item>Fashion \u0026 Accessories</item>
+        <item>Books, Movies, Music \u0026 Games</item>
+        <item>Electronics \u0026 Appliances</item>
+        <item>Kids, Baby \u0026 Maternity</item>
+        <item>Home \u0026 Garden</item>
+        <item>Restaurants, Food \u0026 Drink</item>
+        <item>Leisure \u0026 Days Out</item>
+        <item>Beauty, Health \u0026 Wellness</item>
+        <item>Finance \u0026 Insurance</item>
+        <item>Flights, Hotels \u0026 Holidays</item>
+        <item>Flowers \u0026 Gifts</item>
+        <item>Shoes \u0026 Bags</item>
+        <item>Sports \u0026 Outdoors</item>
+        <item>Groceries</item>
+        <item>Automotive</item>
+        <item>Pets</item>
+        <item>Student Discounts</item>
+        <item>Computers, Mobiles \u0026 Tablets</item>
+    </string-array>
+    <string-array name="categories_uk_ids">
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>21</item>
+        <item>23</item>
+        <item>24</item>
+        <item>27</item>
+    </string-array>
+    <string-array name="categories_uk_logos">
+        <item>"B"</item>
+        <item>"r"</item>
+        <item>"o"</item>
+        <item>"Q"</item>
+        <item>"v"</item>
+        <item>"b"</item>
+        <item>"C"</item>
+        <item>"w"</item>
+        <item>"u"</item>
+        <item>"s"</item>
+        <item>"D"</item>
+        <item>"x"</item>
+        <item>"z"</item>
+        <item>"y"</item>
+        <item>">"</item>
+        <item>"p"</item>
+        <item>"A"</item>
+        <item>"E"</item>
+        <item>"="</item>
+    </string-array>
+    <string-array name="categories_uk_filter">
+        <item> "Fashion \u0026 Accessories"</item>
+        <item> "Sports \u0026 Outdoors"</item>
+        <item> "Shoes \u0026 Bags"</item>
+        <item>"Electronics \u0026 Appliances"</item>
+        <item>"Home"</item>
+        <item>"Beauty"</item>
+        <item>"Holidays"</item>
+    </string-array>
+
+    <string-array name="categories_ids_uk_filter">
+        <item>"3"</item>
+        <item>"17"</item>
+        <item>"16"</item>
+        <item>"6"</item>
+        <item>"8"</item>
+        <item>"12"</item>
+        <item>"14"</item>
+    </string-array>
+
+    <string-array name="push_optin_retailers_uk">
+        </string-array>
+
+</resources>

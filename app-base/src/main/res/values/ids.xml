@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="tag_id">111</integer>
+    <integer name="tag_position">101</integer>
+    <integer name="tag_is_remove">102</integer>
+    <integer name="tag_notification_type">103</integer>
+</resources>

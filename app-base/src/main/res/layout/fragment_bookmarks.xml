@@ -1,0 +1,79 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/main_header"
+            layout="@layout/screens_header" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <RelativeLayout
+            android:id="@+id/no_bookmarks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/no_bookmarks_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/cn_app_no_boomarks_message"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/no_bookmarks_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorPrimary"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/cn_app_no_boomarks_button"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/no_bookmarks_button"
+                android:layout_below="@+id/no_bookmarks_message"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_bookmark_24"
+                android:tint="@color/colorPrimary"
+                android:padding="40dp"/>
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/bookmarks_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/bookmarks_margin_left"
+            android:paddingRight="@dimen/bookmarks_margin_left"
+            android:paddingTop="@dimen/bookmarks_margin_left"
+            android:clipToPadding="false"/>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

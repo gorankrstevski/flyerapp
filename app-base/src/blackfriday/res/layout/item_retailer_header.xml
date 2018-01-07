@@ -1,0 +1,26 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/voucher_cardview"
+    style="@style/cardForeground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:stateListAnimator="@drawable/view_elevation"
+    android:transitionName="cardview"
+    card_view:cardBackgroundColor="#fff"
+    card_view:cardCornerRadius="5dp"
+    card_view:elevation="@dimen/voucher_item_elevation">
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/retailer_logo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:elevation="@dimen/base_item_elevation"
+        android:transitionName="retailerLogo"
+        android:padding="5dp"/>
+</android.support.v7.widget.CardView>

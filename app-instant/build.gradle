@@ -1,0 +1,72 @@
+apply plugin: 'com.android.feature'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "app"
+
+    productFlavors {
+
+        lexpress {
+            dimension "app"
+            versionName "2.5"
+            versionCode 21
+
+        }
+
+        blackfriday {
+            dimension "app"
+            versionName "1.0.5"
+            versionCode 6
+        }
+
+    }
+
+}
+
+dependencies {
+
+    implementation project(':app-base')
+
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.google.com"
+    }
+    maven {
+        url "http://maven.batch.com/release"
+    }
+    maven {
+        url "https://mint.splunk.com/gradle/"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url "http://dl.bintray.com/jayrambhia/maven"
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}

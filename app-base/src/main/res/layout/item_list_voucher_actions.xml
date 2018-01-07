@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/voucher_right"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    android:layout_toRightOf="@+id/voucher_left"
+    android:orientation="vertical"
+    android:paddingLeft="2dp"
+    android:gravity="center_vertical|center_horizontal"
+    >
+
+    <com.cuponation.android.ui.view.AutoResizeTextView
+        android:id="@+id/voucher_code"
+        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+        android:layout_width="@dimen/voucher_list_item_action_width"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/voucher_list_item_action_margin"
+        android:layout_marginRight="@dimen/voucher_list_item_action_margin"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/vertical_gradient_orange_stroke"
+        android:gravity="center"
+        android:lines="1"
+        android:padding="8dp"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:ignore="MissingPrefix" />
+
+    <Button
+        android:id="@+id/voucher_copy_and_go_to_shop"
+        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+        android:layout_width="@dimen/voucher_list_item_action_width"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/voucher_list_item_action_margin"
+        android:layout_marginRight="@dimen/voucher_list_item_action_margin"
+        android:background="@drawable/rounded_corners_orange"
+        android:text="@string/cn_app_copy_and_go_to_shop"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        tools:ignore="MissingPrefix" />
+
+</LinearLayout>

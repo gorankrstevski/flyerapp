@@ -1,0 +1,287 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
+
+    <include
+        android:id="@+id/main_header"
+        layout="@layout/screens_header" />
+
+    <include
+        layout="@layout/settings_push_section"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/settings_country_section"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/settings_item_bg"
+        android:gravity="center"
+        android:text="Settings"
+        android:textAlignment="center"
+        android:textColor="@color/text_color_dark"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/push_enabled_retailers_pref"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/settings_item_bg"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/all_retailers_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="ON  >" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/all_retailers_label"
+                    android:text="@string/cn_app_retailers_settings_title"
+                    android:textColor="@color/text_color_dark"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/prefereces_promo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/settings_item_bg"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/promo_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:theme="@style/SwitchTheme" />
+
+                <TextView
+                    android:id="@+id/promo_caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/promo_switch"
+                    android:text="@string/cn_app_push_retailers_title"
+                    android:textColor="@color/text_color_dark"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/promo_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/promo_caption"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@id/promo_switch"
+                android:text="@string/cn_app_push_retailers_text"
+                android:textColor="@color/text_color_dark"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/prefereces_push"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/settings_item_bg"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/my_retailer_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:theme="@style/SwitchTheme" />
+
+                <TextView
+                    android:id="@+id/my_retailer_caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/my_retailer_switch"
+                    android:text="@string/cn_app_push_retailers_title"
+                    android:textColor="@color/text_color_dark"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/push_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/my_retailer_caption"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@id/my_retailer_switch"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/cn_app_push_retailers_text"
+                android:textColor="@color/text_color_dark"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+
+                android:id="@+id/prefereces_bookmark"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/settings_item_bg"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/bookmark_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:theme="@style/SwitchTheme" />
+
+                <TextView
+                    android:id="@+id/bookmark_caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/bookmark_switch"
+                    android:text="@string/cn_app_bookmarks_notification_title"
+                    android:textColor="@color/text_color_dark"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bookmark_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/bookmark_caption"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@id/bookmark_switch"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/cn_app_bookmarks_notification_text"
+                android:textColor="@color/text_color_dark"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/country_selection_pref"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/settings_item_bg"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/country_selection_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+                <ImageView
+                    android:id="@+id/country_selection_flag"
+                    android:layout_width="32dp"
+                    android:layout_height="24dp"
+                    android:layout_toLeftOf="@+id/country_selection_label"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/country_selection_flag"
+                    android:text="@string/cn_app_country"
+                    android:textColor="@color/text_color_dark"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/onboarding_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_horizontal"
+        android:padding="10dp"
+        android:text="@string/cn_app_onboarding"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/terms_and_cond_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/cn_app_terms_and_conditions"
+        android:textColor="@color/colorPrimary" />
+
+
+</LinearLayout>

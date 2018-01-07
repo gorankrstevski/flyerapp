@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("keystore/keystore.properties")
+
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix 'stg'
+        }
+
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    flavorDimensions "app"
+
+    productFlavors {
+        lexpress {
+            dimension "app"
+            applicationId 'com.codepromo.lexpress.app'
+            resValue "string", "app_scheme", "lexpresscodepromo"
+            buildConfigField 'boolean', 'ENABLE_SPLUNK', 'true'
+            buildConfigField 'boolean', 'IS_WL_BUILD', 'true'
+            signingConfig signingConfigs.release
+            versionName "2.5.2"
+            versionCode 23
+        }
+
+        blackfriday {
+            dimension "app"
+            applicationId 'com.cuponation.app'
+            applicationIdSuffix 'bf'
+            resValue "string", "app_scheme", "cuponationbf"
+            buildConfigField 'boolean', 'ENABLE_SPLUNK', 'true'
+            buildConfigField 'boolean', 'IS_WL_BUILD', 'false'
+            signingConfig signingConfigs.release
+            versionName "1.0.6"
+            versionCode 7
+        }
+
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.google.com"
+    }
+    maven {
+        url "http://maven.batch.com/release"
+    }
+    maven {
+        url "https://mint.splunk.com/gradle/"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url  "http://dl.bintray.com/jayrambhia/maven"
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    implementation project(':app-full')
+
+    implementation 'com.android.support:support-v4:26.0.2'
+}

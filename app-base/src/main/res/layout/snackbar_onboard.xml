@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/onboard_initial_snackbar">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@drawable/drop_shadow"
+        android:layout_above="@+id/snackbar_label_top"
+        android:rotation="180"/>
+
+    <TextView
+        android:id="@+id/snackbar_label_top"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/snackbar_label_bottom"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:gravity="bottom"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textStyle="bold"
+        android:text="@string/cn_app_onboard_select_few_retailers_welcome"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/snackbar_label_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:gravity="top"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/cn_app_onboard_select_few_retailers"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+</RelativeLayout>

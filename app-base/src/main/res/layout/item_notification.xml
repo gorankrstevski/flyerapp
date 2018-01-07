@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/voucher_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stateListAnimator="@drawable/view_elevation"
+    android:transitionName="cardview"
+    card_view:cardBackgroundColor="#fff"
+    card_view:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    card_view:elevation="@dimen/voucher_item_elevation"
+    style="@style/cardForeground">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="76dp">
+
+        <FrameLayout
+            android:id="@+id/image_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/notification_image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="5dp"
+                android:scaleType="center"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/notification_image_in_text_view"
+                fontPath="fonts/icon.ttf"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:scaleType="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="35sp"
+                android:visibility="gone"
+                tools:ignore="MissingPrefix" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/notification_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/image_container"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/notification_expired"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cn_app_notification_expired"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/notification_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="3"
+                android:textColor="@color/text_color_dark" />
+
+            <TextView
+                android:id="@+id/notification_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/undo_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:paddingLeft="24dp"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/notification_delete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/cn_app_erased"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/notification_undo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/cn_app_undo"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

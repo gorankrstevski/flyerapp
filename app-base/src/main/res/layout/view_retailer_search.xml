@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_alert_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="64dp"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:ignore="Overdraw">
+
+    <!--Search bar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/search_bar_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:tint="@color/search_bar_hint"
+            app:srcCompat="@drawable/ic_search_black_24dp" />
+
+        <EditText
+            android:id="@+id/search_field"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/cn_app_search_favs"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:lines="1"
+            android:textColor="@color/text_color_dark"
+            android:textColorHint="@color/search_bar_hint" />
+
+        <ImageView
+            android:id="@+id/clear_searchview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:tint="@android:color/white"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/search_ic_clear_black_24dp" />
+    </LinearLayout>
+
+    <id.gits.baso.BasoProgressView
+        android:id="@+id/progressview_container"
+        style="@style/ProgressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/popular_brands_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="true"
+            android:text="@string/cn_app_your_loved_ones"
+            android:textColor="@color/text_color_dark" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/popular_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/all_brands_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/alphabet_indexer"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

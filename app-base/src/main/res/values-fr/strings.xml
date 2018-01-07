@@ -1,0 +1,139 @@
+<resources>
+    <string name="cn_app_expires_tomorrow">Expire demain</string>
+    <string name="cn_app_expires_today">Expire aujourd\'hui</string>
+    <string name="cn_app_verified">Vérifié</string>
+    <string name="cn_app_go_to_shop">Vers le magasin</string>
+    <string name="cn_app_no_code_for_this_deal">Aucun code nécessaire</string>
+    <string name="cn_app_did_it_work">Cela a-t-il marché?</string>
+    <string name="cn_app_notifications">Notifications</string>
+    <string name="cn_app_settings">Réglages</string>
+    <string name="cn_app_favorites">" Favoris"</string>
+
+    <string name="cn_app_myretailers_settings_title">Codes promo pour mes magasins</string>
+    <string name="cn_app_myretailers_settings_text">Nous vous informerons des meilleures offres pour les magasins que vous utilisez sur le web</string>
+    <string name="cn_app_bookmarks_notification_title">Coupons à expiration</string>
+    <string name="cn_app_bookmarks_notification_text">Nous vous avertirons quand des coupons sauvegardés arriveront à expiration</string>
+    <string name="cn_app_push_retailers_title">Notifications promotionnelles</string>
+    <string name="cn_app_push_retailers_text">De temps en temps, nous vous informerons des meilleurs offres selon vos centres d\'intérêts.</string>
+    <string name="cn_app_retailers_settings_title">Notifications automatiques (nouveaux codes)</string>
+    <string name="cn_app_automatic_notifications">Notifications automatiques</string>
+    <string name="cn_app_retailers_settings_all">Tous les magasins</string>
+    <string name="cn_app_country">Country</string>
+
+    <string name="cn_app_notification_codes">Nous avons %1$s codes pour %2$s</string>
+    <string name="cn_app_search_favs">Chercher</string>
+    <string name="cn_app_search_bar">Chercher des coupons</string>
+    <string name="cn_app_favs_mybrands_title">Mes magasins</string>
+    <string name="cn_app_favs_allbrands_title">Tous</string>
+    <string name="cn_app_favs_popular_title">Populaires</string>
+    <string name="cn_app_favs_popular_subtitle">Les magasins les plus populaires</string>
+    <string name="cn_app_notification_default6">Ajoutez quelques magasins pour recevoir des notifications</string>
+    <string name="cn_app_notification_default5">Ajoutez quelques magasins pour recevoir des notifications ou visitez simplement quelques magasins en ligne et nous enverrons un code si nous en avons</string>
+    <string name="cn_app_seemore">Voir tous</string>
+    <string name="cn_app_add_retailer_HS">Ajoutez un magasin</string>
+    <string name="cn_app_notification_expired">Expiré</string>
+    <string name="cn_app_copy_code">Copier code</string>
+    <string name="cn_app_expire_in_days">Expire dans %s jours</string>
+
+    <string name="cn_app_expire_in_month">Expire dans un mois</string>
+    <string name="cn_app_expire_in_months">Expire dans %s mois</string>
+
+    <string name="cn_app_settings_my_retailer_alert">Gardez ces notifications actives si vous voulez recevoir des réductions pendant que vous visitez des magasins</string>
+    <string name="cn_app_settings_alert_ok">OK</string>
+    <string name="cn_app_settings_alert_cancel">Annuler</string>
+    <string name="cn_app_copy_and_go_to_shop">  Copier et aller sur le site</string>
+    <string name="cn_app_likes">%s j\'aime</string>
+    <string name="cn_app_loading_message">Chargement…</string>
+
+    <string name="cn_app_your_loved_ones">Sélectionnez quelques magasins</string>
+    <string name="cn_app_onboarding_done">Terminer</string>
+    <string name="cn_app_vote_message">Merci pour votre vote</string>
+    <string name="cn_app_retailer_added">Magasin ajouté</string>
+    <string name="cn_app_retailer_removed">Magasin enlevé</string>
+    <string name="cn_app_retailers_added">Your selected retailers(%s)</string>
+
+    <string name="cn_app_terms_and_conditions">Conditions générales d\'utilisation</string>
+    <string name="cn_app_no_cupons_found">Aucun magasin trouvé! Veuillez ré-essayer ou sélectionnez un magasin suggéré.</string>
+
+    <string name="cn_app_try_again">Réessayer</string>
+    <string name="cn_app_loading_error">Chargement interrompu, tapez le bouton ci-dessous pour essayer à nouveau.</string>
+    <string name="cn_app_check_your_connection">Veuillez vérifier votre connexion internet</string>
+    <string name="cn_app_onboarding">Tutoriel</string>
+
+    <string name="cn_app_opening_shop">Ouverture du magasin</string>
+    <string name="cn_app_code_copied">Code copié, ouverture du magasin</string>
+
+    <string name="cn_app_banner_1">Touchez l\'icône du menu sur le site d\'un magasin</string>
+    <string name="cn_app_banner_2">Tapez ensuite sur "Partager"</string>
+    <string name="cn_app_banner_3">"Puis sélectionnez l\'icône %s pour voir tous les coupons de ce magasin"</string>
+
+    <string name="cn_app_banner_1_android5">Ne perdez plus de temps à chercher des codes promo</string>
+    <string name="cn_app_banner_2_android5">Nous trouvons automatiquement des codes promo pour vous</string>
+    <string name="cn_app_banner_3_android5">Lorsque vous visitez un magasin en ligne, nous vous avertirons dès que des codes promo sont disponibles via une notification.</string>
+
+    <string name="cn_app_share_and_save">Partagez, économisez!</string>
+    <string name="cn_app_share_text">"Regarde ce coupon que j'ai trouvé sur L\'Express Codes Promo. "</string>
+    <string name="cn_app_share">Partager</string>
+
+    <string name="cn_app_create">Créer une alerte</string>
+    <string name="cn_app_done">Terminé</string>
+    <string name="cn_app_alert_added_for">"Alerte ajoutée pour "</string>
+    <string name="cn_app_no_alerts_added">Aucune alerte ajoutée</string>
+    <string name="cn_app_one_alerts_added">1 alerte ajoutée</string>
+    <string name="cn_app_more_alerts_added">" alertes ajoutées"</string>
+
+    <string name="categories">CATÉGORIES</string>
+    <string name="cn_app_save_even_more">Économisez encore plus!</string>
+    <string name="cn_app_add_more_stores">Ajouter des magasins</string>
+    <string name="cn_app_unique_code_not_available">Plus de codes disponibles pour l\'instant, ré-éssayez plus tard</string>
+
+    <string name="cn_app_erased">Effacée</string>
+    <string name="cn_app_undo">ANNULER</string>
+    <string name="cn_app_no_boomarks_message">Tapez cette icône pour sauvegarder un code ou un deal.</string>
+    <string name="cn_app_no_boomarks_button">Retour à l\'ecran d\'accueil</string>
+
+    <string name="cn_app_copy_and_go">Copier et aller</string>
+    <string name="cn_app_to_the_shop">Vers le magasin</string>
+
+    <string name="cn_app_code_removed">Code supprimé de cette section</string>
+    <string name="cn_app_deal_removed">Deal supprimé de cette section</string>
+    <string name="cn_app_voucher_added">Gardé dans les favoris</string>
+
+    <string name="cn_app_expire_hours">%sh</string>
+    <string name="cn_app_expire_code_notiffication">"Votre code promo pour %s expire dans "</string>
+    <string name="cn_app_expire_deal_notiffication">"Votre deal pour %s expire dans "</string>
+
+    <string name="cn_app_expire_code_no_voucher">Désolé, ce code a expiré, visitez le magasin pour consulter d\'autres offres</string>
+    <string name="cn_app_expire_deal_no_voucher">Désolé, ce deal a expiré, visitez le magasin pour consulter d\'autres offres</string>
+
+    <string name="cn_app_rate_dialog_title">Vous aimez %s ?</string>
+    <string name="cn_app_rate_dialog_message">Avez-vous un moment pour noter l\'app?</string>
+    <string name="cn_app_rate_dialog_btn_rate_app">Noter l\'app</string>
+    <string name="cn_app_rate_dialog_btn_no_thanks">Non merci</string>
+    <string name="cn_app_rate_dialog_btn_maybe_later">Plus tard</string>
+
+    <string name="cn_app_code">CODE</string>
+    <string name="cn_app_deal">DEAL</string>
+
+    <string name="cn_app_notification_new_coupons">" Nouveaux coupons"</string>
+    <string name="cn_app_options_btn">Réglages</string>
+
+    <string name="bookmark_tooltip">Gardez un code promo en privé.</string>
+    <string name="cn_app_bookmarked">Gardé dans les favoris</string>
+    <string name="cn_app_bookmark">Garder</string>
+
+    <string name="cn_app_top_code_category">"Tous les codes "</string>
+
+    <string name="cn_app_expired">Expiré</string>
+    <string name="cn_app_code_expired">Ce code a expiré</string>
+
+    <string name="cn_app_onboard_select_few_retailers_welcome">Bienvenue!</string>
+    <string name="cn_app_onboard_select_few_retailers">Veuillez sélectionner quelques magasins afin que nous puissions vous donner les meilleurs codes promo.</string>
+    <string name="cn_app_onboard_selected_number">%s sélectionnés</string>
+    <string name="cn_app_onboard_heart_tooltip">Toucher le coeur pour ajouter un magasin</string>
+    <string name="cn_app_done_button_tooltip">Touchez ici quand vous êtes prêt</string>
+    <string name="cn_app_home_voucher_tooltip">Touchez pour voir une offre</string>
+
+    <string name="cn_app_new_tag">Nouveau</string>
+    <dimen name="new_tag_font_size">9sp</dimen>
+</resources>

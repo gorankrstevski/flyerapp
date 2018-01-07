@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/voucher_cardview"
+    style="@style/cardForeground"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:stateListAnimator="@drawable/view_elevation"
+    android:transitionName="cardview"
+    card_view:cardBackgroundColor="#fff"
+    card_view:cardCornerRadius="5dp"
+    card_view:elevation="@dimen/voucher_item_elevation">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/voucher_list_item_height"
+        android:background="@android:color/transparent"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp">
+
+        <RelativeLayout
+            android:id="@+id/voucher_left"
+            android:layout_width="@dimen/retailer_feed_image_width"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/voucher_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/caption_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/caption1"
+                    style="@style/voucherListCaption"
+                    android:layout_marginTop="5dp"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/caption2"
+                    style="@style/voucherListCaption"
+                    android:layout_marginBottom="5dp"
+                    android:textAllCaps="true"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/voucher_bookmark"
+                android:layout_width="48dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/voucher_text"
+                android:paddingBottom="12dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="6dp"
+                app:srcCompat="@drawable/ic_bookmark_24" />
+
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/voucher_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/voucher_left"
+            android:background="@android:color/white">
+
+        </android.support.v4.view.ViewPager>
+
+
+        <View
+            android:id="@+id/perforation_view"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/voucher_left"
+            android:background="@drawable/grey_vertical_separator" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

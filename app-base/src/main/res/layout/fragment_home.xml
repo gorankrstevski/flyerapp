@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cuponation.android.ui.view.InterceptableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/screens_header"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        />
+
+    <com.lapism.searchview.SearchView
+        android:id="@+id/searchView"
+        style="@style/SearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/search_bar_background"
+        android:paddingBottom="8dp"
+        app:search_version="toolbar_icon"
+        android:layout_below="@+id/header"/>
+
+
+    <include
+        layout="@layout/voucher_filter_bar"
+        android:visibility="gone"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/home_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/cn_app_add_retailer_HS"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_dark" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/brands_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="96dp" />
+
+            <id.gits.baso.BasoProgressView
+                android:id="@+id/progressview_container"
+                style="@style/ProgressIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/voucher_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</com.cuponation.android.ui.view.InterceptableRelativeLayout>

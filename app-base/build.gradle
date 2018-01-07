@@ -1,0 +1,196 @@
+apply plugin: 'com.android.feature'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        buildConfigField 'String', 'CLICKOUT_URL', '"http://clickout.cuponation."'
+        baseFeature true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "app"
+
+    productFlavors {
+
+        lexpress {
+            resValue "string", "app_scheme", "lexpresscodepromo"
+            buildConfigField 'boolean', 'ENABLE_SPLUNK', 'true'
+            buildConfigField 'boolean', 'IS_WL_BUILD', 'true'
+            dimension "app"
+            versionName "2.5"
+            versionCode 21
+        }
+
+        blackfriday {
+            resValue "string", "app_scheme", "cuponationbf"
+            buildConfigField 'boolean', 'ENABLE_SPLUNK', 'true'
+            buildConfigField 'boolean', 'IS_WL_BUILD', 'false'
+            versionName "1.0.5"
+            versionCode 6
+            dimension "app"
+        }
+
+    }
+
+    baseFeature = true
+
+}
+
+dependencies {
+
+    application project(':cuponsapk')
+    feature project(':app-full')
+
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    // adjust
+    compile 'com.adjust.sdk:adjust-android:4.11.4'
+
+    // multidex
+    compile 'com.android.support:multidex:1.0.2'
+
+    // instant app
+    implementation 'com.google.android.instantapps:instantapps:1.0.0'
+
+    // support libraries
+    implementation 'com.android.support:appcompat-v7:26.0.2'
+    compile 'com.android.support:design:26.0.2'
+    compile 'commons-io:commons-io:2.4'
+
+    // Play services
+    compile 'com.google.android.gms:play-services-base:10.2.1'
+    compile 'com.google.android.gms:play-services-gcm:10.2.1'
+    compile 'com.google.android.gms:play-services-analytics:10.2.1'
+
+    // chrome custom tabs
+    compile 'com.android.support:customtabs:26.0.2'
+
+    // recycler view
+    compile 'com.android.support:recyclerview-v7:26.0.2'
+
+    // Card view
+    compile 'com.android.support:cardview-v7:26.0.2'
+
+    //network
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+
+    //RX Java Android
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    // If you want pre-written Activities and Fragments you can subclass as providers
+    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1'
+
+    // Event bus
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    // custom fonts
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+
+    // butterknife
+    implementation('com.jakewharton:butterknife:9.0.0-SNAPSHOT') {
+        exclude group: 'com.android.support', module: 'support-compat'
+    }
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
+
+    // Batch app
+    //compile 'com.batch.android:batch-sdk:1.10+'
+
+    // Splunk Mint
+    compile "com.splunk.mint:mint:5.0.0"
+
+    // image loading
+    //compile 'com.squareup.picasso:picasso:latest.integration'
+    dependencies {
+        compile group: "com.squareup.picasso", name: "picasso", version: "2.6.0-SNAPSHOT", changing: true
+    }
+
+    // View Pager
+    compile 'me.relex:circleindicator:1.2.1@aar'
+
+    // Circle image view
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+    // ToolTips
+    compile 'it.sephiroth.android.library.targettooltip:target-tooltip-library:1.3.15'
+    compile 'com.github.vihtarb:tooltip:0.1.9'
+
+    // Loading view
+    compile 'id.gits:baso:1.0'
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+
+    // twitter heart animation on icon
+    compile 'com.github.jd-alexander:LikeButton:0.2.3'
+
+    // Badger
+    compile "me.leolin:ShortcutBadger:1.1.16@aar"
+
+    // Recyclerview add/remove animation
+    implementation('jp.wasabeef:recyclerview-animators:2.2.7') {
+        exclude group: 'com.android.support', module: 'support-compat'
+    }
+
+    // simple storage
+    compile 'io.paperdb:paperdb:2.6'
+
+    //feature project(":app-full")
+    feature project(":app-instant")
+    application project(':cuponsapk')
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.google.com"
+    }
+    maven {
+        url "http://maven.batch.com/release"
+    }
+    maven {
+        url "https://mint.splunk.com/gradle/"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url "http://dl.bintray.com/jayrambhia/maven"
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}

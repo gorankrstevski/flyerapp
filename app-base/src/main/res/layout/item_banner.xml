@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="92dp"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/rounded_corners_red_10">
+
+    <ImageView
+        android:id="@+id/banner_image"
+        android:layout_width="wrap_content"
+        android:layout_height="92dp"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitEnd"
+        android:src="@drawable/banner_1"/>
+    <ImageView
+        android:id="@+id/banner_animated"
+        android:layout_width="62dp"
+        android:layout_height="82dp"
+        android:src="@drawable/hand_with_click"
+        android:layout_marginRight="-20dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/banner_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/banner_image"
+        android:text="@string/cn_app_banner_1"
+        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

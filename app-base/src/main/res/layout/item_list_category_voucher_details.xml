@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/voucher_right"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_toRightOf="@+id/voucher_left"
+    android:background="@android:color/white"
+    android:paddingLeft="15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/voucher_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/voucher_list_item_margin_top"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color_dark"
+        android:textSize="14sp"
+        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+        />
+
+    <TextView
+        android:id="@+id/voucher_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/voucher_end_date"
+        android:layout_below="@+id/voucher_title"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/voucher_list_item_margin_top"
+        android:maxLines="3"
+        android:textColor="@color/text_color_dark"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/voucher_desc"
+        android:background="@color/background_color" />
+
+    <TextView
+        android:id="@+id/voucher_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/time_icon"
+        android:textColor="@color/text_color_dark_gray"
+        android:textSize="12sp"
+        android:transitionName="voucherEndDate"/>
+
+    <ImageView
+        android:id="@+id/time_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/voucher_end_date"
+        android:tint="@color/text_color_light_gray"
+        app:srcCompat="@drawable/ic_time_black_24dp" />
+
+</RelativeLayout>

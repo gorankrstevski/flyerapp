@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
+
+    <ImageView
+        android:id="@+id/share_dialog_back_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/ic_back_64dp"
+        android:padding="10dp"
+        android:tint="@color/text_color_dark_gray"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cn_app_share"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/share_dialog_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:padding="15dp"
+        android:paddingBottom="5dp"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="20dp"
+        />
+</LinearLayout>

@@ -1,0 +1,133 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary" tools:ignore="NewApi">@color/colorPrimary</item>
+        <item name="colorPrimaryDark" tools:ignore="NewApi">@color/colorPrimaryDark</item>
+        <item name="colorAccent" tools:ignore="NewApi">@color/colorAccent</item>
+
+    </style>
+
+    <style name="Theme.Transparent" parent="Base.Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--<item name="md_title_gravity">center</item>-->
+    </style>
+
+    <style name="FlatButton" parent="Base.Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/text_color_light_gray</item>
+    </style>
+
+    <style name="SwitchTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="SearchView">
+        <item name="search_background_color">@color/search_bar_field</item>
+        <item name="search_hint_color">@color/search_bar_hint</item>
+        <item name="search_text_color">@color/text_color_dark</item>
+        <item name="search_text_highlight_color">@color/colorPrimary</item>
+        <item name="search_icon_color">@color/text_color_light_gray</item>
+    </style>
+
+    <style name="ToolTipLayoutCustomStyle">
+        <item name="ttlm_padding">20dip</item>
+        <item name="ttlm_strokeColor">@android:color/black</item>
+        <item name="ttlm_backgroundColor">@android:color/black</item>
+        <item name="ttlm_strokeWeight">1dip</item>
+        <item name="ttlm_cornerRadius">10dip</item>
+        <item name="android:textAppearance">@style/ToolTipTextStyle</item>
+    </style>
+
+    <style name="ToolTipTextStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    
+    <style name="TextAppearance.FontPath" parent="android:TextAppearance">
+        <item name="fontPath">fonts/font-regular.ttf</item>
+    </style>
+    <style name="TextAppearance.FontPath.Bold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/font-bold.ttf</item>
+    </style>
+
+    <style name="VoucherTypeBadge">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAppearance">@style/TextAppearance.FontPath.Bold</item>
+        <item name="android:textSize">12dp</item>
+
+    </style>
+
+    <style name="ProgressIndicator">
+        <item name="android:background">@color/background_color</item>
+        <item name="baso_finishText">@string/cn_app_loading_error</item>
+        <item name="baso_finishTextSize">18sp</item>
+        <item name="baso_finishButtonText">@string/cn_app_try_again</item>
+        <item name="baso_progressText">@string/cn_app_loading_message</item>
+        <item name="baso_finishSrcWidth">160dp</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="ShareOptionsVerticalSeparator">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/separator_color</item>
+    </style>
+
+    <style name="ShareOptions">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="ShareTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="ShareOptionsHolder">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="cardForeground">
+        <item name="android:foreground">@drawable/card_foreground</item>
+    </style>
+
+    <style name="cardBackground">
+        <item name="android:background">@drawable/rounded_corners_white</item>
+    </style>
+
+    <style name="voucherListCaption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.FontPath.Bold</item>
+    </style>
+
+</resources>

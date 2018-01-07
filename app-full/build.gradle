@@ -1,0 +1,82 @@
+apply plugin: 'com.android.feature'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "app"
+
+    productFlavors {
+
+        lexpress {
+            dimension "app"
+            resValue "string", "app_scheme", "lexpresscodepromo"
+            buildConfigField 'boolean', 'ENABLE_SPLUNK', 'true'
+            buildConfigField 'boolean', 'IS_WL_BUILD', 'true'
+            versionName "2.5.1"
+            versionCode 22
+        }
+
+        blackfriday {
+            dimension "app"
+            resValue "string", "app_scheme", "cuponationbf"
+            buildConfigField 'boolean', 'ENABLE_SPLUNK', 'true'
+            buildConfigField 'boolean', 'IS_WL_BUILD', 'false'
+            versionName "1.0.5"
+            versionCode 6
+        }
+
+    }
+
+}
+
+dependencies {
+
+    implementation project(':app-base')
+
+    // Use buttons SDK
+    compile 'com.usebutton:android-sdk:5.17.0'
+
+    // Batch app
+    compile 'com.batch.android:batch-sdk:1.10+'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.google.com"
+    }
+    maven {
+        url "http://maven.batch.com/release"
+    }
+    maven {
+        url "https://mint.splunk.com/gradle/"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url "http://dl.bintray.com/jayrambhia/maven"
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}

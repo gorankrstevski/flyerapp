@@ -1,0 +1,239 @@
+<com.cuponation.android.ui.view.InterceptableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="0dp"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:ignore="UselessLeaf" />
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/onboard_bottom_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/slide_title"
+            android:layout_centerHorizontal="true"
+            android:background="@color/background_color"
+            android:orientation="vertical">
+
+            <!--Search bar-->
+            <LinearLayout
+                android:id="@+id/search_bar_holder"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:tint="@color/search_bar_hint"
+                    app:srcCompat="@drawable/ic_search_black_24dp" />
+
+                <EditText
+                    android:id="@+id/search_field"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/cn_app_search_favs"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:textColor="@color/text_color_dark"
+                    android:textColorHint="@color/search_bar_hint" />
+
+                <ImageView
+                    android:id="@+id/clear_searchview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:tint="@color/search_bar_hint"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/search_ic_clear_black_24dp" />
+
+                <com.cuponation.android.ui.view.InterceptableLinearLayout
+                    android:id="@+id/retailer_added_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/retailers_added_counter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="0"
+                        android:textSize="16sp" />
+
+                    <com.like.LikeButton
+                        android:id="@+id/retailer_added_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        app:anim_scale_factor="2"
+                        app:circle_start_color="@color/colorSecondary"
+                        app:circle_end_color="@color/colorPrimary"
+                        app:dots_primary_color="@color/colorAccent"
+                        app:dots_secondary_color="@color/colorSecondary"
+                        app:icon_size="22dp"
+                        app:icon_type="heart"
+                        app:like_drawable="@drawable/ic_fav"
+                        app:unlike_drawable="@drawable/ic_fav_empty" />
+                </com.cuponation.android.ui.view.InterceptableLinearLayout>
+
+            </LinearLayout>
+
+            <id.gits.baso.BasoProgressView
+                android:id="@+id/progressview_container"
+                style="@style/ProgressIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/search_bar_holder" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/popular_brands_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/search_bar_holder"
+                android:background="@color/background_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/cn_app_your_loved_ones"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color_dark" />
+
+                <com.cuponation.android.ui.view.CategoriesFilterListView
+                    android:id="@+id/category_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="16dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/popular_brands_recycle_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/all_brands_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/search_bar_holder"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/alphabet_indexer"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/added_retailers_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/search_bar_holder"
+                android:background="@color/text_color_dark_trans"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.cuponation.android.ui.view.LikedRetailersDrawerView
+                    android:id="@+id/added_retailers_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:elevation="16dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/onboard_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/bottom_bar_label"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/done_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/rounded_corner_white_border"
+            android:clickable="true"
+            android:text="@string/cn_app_onboarding_done"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/snackbar_onboard"
+        android:visibility="gone" />
+</com.cuponation.android.ui.view.InterceptableRelativeLayout>

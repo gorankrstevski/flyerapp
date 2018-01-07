@@ -1,0 +1,1 @@
+include ':app-base', ':cuponsapk', ':cupons-instantapp', ':app-full', ':app-instant'

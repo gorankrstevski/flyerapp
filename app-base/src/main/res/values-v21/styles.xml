@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary" tools:ignore="NewApi">@color/colorPrimary</item>
+        <item name="colorPrimaryDark" tools:ignore="NewApi">@color/colorPrimaryDark</item>
+        <item name="colorAccent" tools:ignore="NewApi">@color/colorAccent</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+
+    </style>
+
+    <style name="cardForeground">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="cardBackground">
+        <item name="android:background">@drawable/rounded_corners_white_no_border</item>
+    </style>
+</resources>

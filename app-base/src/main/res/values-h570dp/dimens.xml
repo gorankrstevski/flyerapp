@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="alphabet_indexer_letter_size">11sp</dimen>
+    <dimen name="voucher_item_height">210dp</dimen>
+</resources>

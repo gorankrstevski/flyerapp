@@ -1,0 +1,10 @@
+<resources>
+
+    <dimen name="voucher_item_width">165dp</dimen>
+    <dimen name="bookmarks_margin_left">4dp</dimen>
+
+    <dimen name="rate_dialog_btn_text_size">16sp</dimen>
+    <dimen name="voucher_list_item_action_width">200dp</dimen>
+    <dimen name="voucher_list_item_action_margin">15dp</dimen>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="batch_api_key" translatable="false">DEV578F463A8D5DDC4788669D49C0B</string>
+    <string name="gcm_sender_api" translatable="false">544222534762</string>
+    <string name="ga_user_id" translatable="false">UA-45773781-3</string>
+    <string name="adjust_app_token" translatable="false">691lcv1t04n4</string>
+    <string name="use_button_app_id" translatable="false">app-0aa746eb38db4565</string>
+    <string name="share_link_to_play_store" translatable="false">https://app.adjust.com/4lso21</string>
+</resources>

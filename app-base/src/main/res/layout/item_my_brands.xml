@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="106dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="@dimen/brands_image_size"
+        android:layout_height="@dimen/brands_image_size"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_circle_bg"
+        />
+
+    <ImageView
+        android:id="@+id/retailer_logo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        />
+
+    <com.like.LikeButton
+        android:id="@+id/retailer_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        app:icon_size="18dp"
+        app:anim_scale_factor="2"
+        app:icon_type="heart"
+        app:like_drawable="@drawable/ic_fav"
+        app:unlike_drawable="@drawable/ic_fav_empty"
+        app:circle_start_color="@color/colorSecondary"
+        app:circle_end_color="@color/colorPrimary"
+        app:dots_primary_color="@color/colorAccent"
+        app:dots_secondary_color="@color/colorSecondary"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:background="@android:color/transparent"/>
+</RelativeLayout>

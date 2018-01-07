@@ -1,0 +1,62 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="true"
+            android:text="@string/cn_app_your_loved_ones"
+            android:textColor="@color/text_color_dark" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_default"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scrollbars="none"/>
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator_default"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:ci_drawable="@drawable/page_indicator_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color_darker"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/cn_app_favs_popular_title"
+                android:textColor="@color/text_color_dark" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager_popular"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scrollbars="none"/>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator_popular"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:ci_drawable="@drawable/page_indicator_bg" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

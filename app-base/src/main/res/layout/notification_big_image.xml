@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/notif_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/notif_title"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/notif_icon"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notif_text"
+            style="@android:style/TextAppearance.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notif_title"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/notif_icon"
+            android:inputType="textMultiLine" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/notif_image"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop" />
+
+</LinearLayout>

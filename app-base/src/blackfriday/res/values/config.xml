@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="batch_api_key" translatable="false">DEV59B00C96CC68A4887D55FDAC8FF</string>
+    <string name="ga_user_id" translatable="false">UA-45773781-3</string>
+    <string name="gcm_sender_api" translatable="false">84926165388</string>
+    <string name="use_button_app_id" translatable="false">app-674ce733c6735095</string>
+</resources>

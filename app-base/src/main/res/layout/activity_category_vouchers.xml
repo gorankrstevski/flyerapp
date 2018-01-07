@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:tint="@color/text_color_light_gray"
+            app:srcCompat="@drawable/ic_back_64dp" />
+
+        <TextView
+            android:id="@+id/category_name"
+            android:textAppearance="@style/TextAppearance.FontPath.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/back_btn"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/text_color_dark"
+            android:textSize="20dp"
+            tools:ignore="MissingPrefix" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/filter_bar"
+        layout="@layout/voucher_filter_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/grey_horizontal_separator"
+        android:rotation="180" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

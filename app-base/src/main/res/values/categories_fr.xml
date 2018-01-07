@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories_fr">
+        <item>"Maison &amp; Jardin"</item>
+        <item>"Mode &amp; Accessoires"</item>
+        <item>"Sport"</item>
+        <item>"Chaussures &amp; Sacs"</item>
+        <item>"Electronique &amp; Téléphonie"</item>
+        <item>"Beauté, Santé et Bien-être"</item>
+        <item>"Loisirs et Divertissements"</item>
+        <item>"Enfants, Bébés et Jouets"</item>
+        <item>"Voyages &amp; Vacances"</item>
+        <item>"Animaux"</item>
+        <item>"Autres services"</item>
+        <item>"Étudiant"</item>
+        <item>"Finance et Assurance"</item>
+        <item>"Fleurs et Cadeaux"</item>
+        <item>"Livres, Films, Musique &amp; Jeux"</item>
+        <item>"Photographie et Impression"</item>
+        <item>"Restauration, Aliments &amp; Boissons"</item>
+        <item>"Shopping Adulte"</item>
+    </string-array>
+
+    <string-array name="categories_fr_ids">
+        <item>"1"</item>
+        <item>"11"</item>
+        <item>"15"</item>
+        <item>"14"</item>
+        <item>"4"</item>
+        <item>"12"</item>
+        <item>"8"</item>
+        <item>"19"</item>
+        <item>"17"</item>
+        <item>"5"</item>
+        <item>"6"</item>
+        <item>"21"</item>
+        <item>"7"</item>
+        <item>"20"</item>
+        <item>"10"</item>
+        <item>"3"</item>
+        <item>"18"</item>
+        <item>"16"</item>
+    </string-array>
+    <string-array name="categories_fr_logos">
+        <item>"b"</item>
+        <item>"r"</item>
+        <item>"y"</item>
+        <item>"z"</item>
+        <item>"Q"</item>
+        <item>"u"</item>
+        <item>"w"</item>
+        <item>"v"</item>
+        <item>"D"</item>
+        <item>"A"</item>
+        <item>"X"</item>
+        <item>"E"</item>
+        <item>"s"</item>
+        <item>"x"</item>
+        <item>"o"</item>
+        <item>"B"</item>
+        <item>"C"</item>
+        <item>">"</item>
+    </string-array>
+
+    <string-array name="categories_fr_filter">
+        <item>"Mode &amp; Accessoires"</item>
+        <item>"Sport"</item>
+        <item>"Chaussures &amp; Sacs"</item>
+        <item>"Electronique"</item>
+        <item>"Maison"</item>
+        <item>"Beauté"</item>
+        <item>"Voyages"</item>
+    </string-array>
+
+    <string-array name="categories_ids_fr_filter">
+        <item>"11"</item>
+        <item>"15"</item>
+        <item>"14"</item>
+        <item>"4"</item>
+        <item>"1"</item>
+        <item>"12"</item>
+        <item>"17"</item>
+    </string-array>
+
+    <string-array name="push_optin_retailers_fr">
+        <item>venere</item>
+        <item>groupon</item>
+        <item>hawkers</item>
+        <item>hotels.com</item>
+        <item>nike</item>
+        <item>adidas</item>
+        <item>sephora</item>
+        <item>asos</item>
+        <item>lacoste</item>
+        <item>yves rocher</item>
+        <item>missguided</item>
+        <item>converse</item>
+        <item>reebok</item>
+        <item>courir</item>
+        <item>galeries lafayette</item>
+        <item>levi\'s</item>
+        <item>ralph lauren</item>
+        <item>jd sports</item>
+        <item>asics</item>
+        <item>quiksilver</item>
+        <item>roxy</item>
+        <item>lafourchette</item>
+        <item>desigual</item>
+        <item>sarenza</item>
+        <item>boohoo.com</item>
+    </string-array>
+
+</resources>

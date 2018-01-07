@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/explore_brands_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/bookmark_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/install_full_app_button"
+            android:layout_width="wrap_content"
+            android:drawableLeft="@drawable/ic_get_app_black_24px"
+            android:text="INSTAll"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/rounded_corners_red_20"
+            android:textColor="@android:color/white"
+            android:drawableTint="@android:color/white"
+            android:layout_height="42dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/grey_horizontal_separator" />
+
+    <com.cuponation.android.ui.view.BottomBarView
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal" />
+
+</LinearLayout>

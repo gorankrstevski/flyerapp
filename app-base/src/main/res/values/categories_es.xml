@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="categories_es">
+        <item> "Hogar \u0026 Jardín"</item>
+        <item> "Moda \u0026 Complementos"</item>
+        <item> "Deportes"</item>
+        <item> "Zapatos \u0026 Bolsos"</item>
+        <item> "Electrónica \u0026 Telefonía"</item>
+        <item> "Salud, Belleza \u0026 Bienestar"</item>
+        <item> "Ocio \u0026 Entretenimiento"</item>
+        <item> "Niños, Bebés \u0026 Juguetes"</item>
+        <item> "Viajes \u0026 Vacaciones"</item>
+        <item> "Mascotas"</item>
+        <item> "Otros Servicios"</item>
+        <item> "Estudiantes"</item>
+        <item> "Finanzas \u0026 Seguros"</item>
+        <item> "Flores \u0026 Regalos"</item>
+        <item> "Libros, Películas, Música\u0026Juegos"</item>
+        <item> "Fotografía \u0026 Impresión"</item>
+        <item> "Restaurantes, Comida \u0026 Bebida"</item>
+        <item> "Tiendas para adultos"</item>
+    </string-array>
+    <string-array name="categories_es_ids">
+        <item>"6" </item>
+        <item>"3" </item>
+        <item>"15"</item>
+        <item>"16"</item>
+        <item>"2" </item>
+        <item>"10"</item>
+        <item>"9" </item>
+        <item>"4" </item>
+        <item>"7" </item>
+        <item>"13"</item>
+        <item>"14"</item>
+        <item>"18"</item>
+        <item>"5" </item>
+        <item>"17"</item>
+        <item>"1" </item>
+        <item>"12"</item>
+        <item>"11"</item>
+        <item>"8" </item>
+    </string-array>
+    <string-array name="categories_es_logos">
+        <item>"b"</item>
+        <item>"r"</item>
+        <item>"y"</item>
+        <item>"z"</item>
+        <item>"Q"</item>
+        <item>"u"</item>
+        <item>"w"</item>
+        <item>"v"</item>
+        <item>"D"</item>
+        <item>"A"</item>
+        <item>"X"</item>
+        <item>"E"</item>
+        <item>"s"</item>
+        <item>"x"</item>
+        <item>"o"</item>
+        <item>"B"</item>
+        <item>"C"</item>
+        <item>">"</item>
+    </string-array>
+
+    <string-array name="categories_es_filter">
+        <item> "Moda \u0026 Complementos"</item>
+        <item> "Deportes"</item>
+        <item> "Zapatos \u0026 Bolsos"</item>
+        <item>"Electrónica"</item>
+        <item>"Hogar"</item>
+        <item>"Belleza"</item>
+        <item>"Viajes"</item>
+    </string-array>
+
+    <string-array name="categories_ids_es_filter">
+        <item>"3"</item>
+        <item>"15"</item>
+        <item>"16"</item>
+        <item>"2"</item>
+        <item>"6"</item>
+        <item>"10"</item>
+        <item>"7"</item>
+    </string-array>
+
+    <string-array name="push_optin_retailers_es">
+        <item>pull&amp;bear</item>
+        <item>zalando</item>
+        <item>groupon</item>
+        <item>nike</item>
+        <item>nike.</item>
+        <item>casa del libro</item>
+        <item>adidas</item>
+        <item>asos</item>
+        <item>amazon</item>
+        <item>ebay</item>
+        <item>hawkers</item>
+        <item>g2a</item>
+        <item>la redoute</item>
+        <item>gearbest</item>
+        <item>telepizza</item>
+        <item>myprotein</item>
+        <item>lookfantastic</item>
+        <item>deliveroo</item>
+        <item>subasta de ocio</item>
+        <item>sarenza</item>
+        <item>vision direct</item>
+        <item>rumbo</item>
+        <item>expedia</item>
+        <item>hoteles.com</item>
+        <item>groupalia</item>
+        <item>yoigo</item>
+        <item>hp</item>
+        <item>yves rocher</item>
+        <item>emp</item>
+        <item>imaginarium</item>
+        <item>zooplus</item>
+        <item>smartbox</item>
+        <item>la vida es bella</item>
+        <item>barceló hoteles</item>
+        <item>the body shop</item>
+
+    </string-array>
+
+</resources>

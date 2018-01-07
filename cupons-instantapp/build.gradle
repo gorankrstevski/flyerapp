@@ -1,0 +1,86 @@
+apply plugin: 'com.android.instantapp'
+
+android {
+    compileSdkVersion 27
+
+    signingConfigs {
+        release {
+            keyAlias 'cuponation'
+            keyPassword 'cupoAPP2016'
+            storeFile file('../keystore/keystore.jks')
+            storePassword 'cupoAPP2016'
+        }
+    }
+
+    flavorDimensions "app"
+
+    productFlavors {
+
+        lexpress {
+            applicationId 'com.codepromo.lexpress.app'
+            resValue "string", "app_scheme", "lexpresscodepromo"
+            buildConfigField 'boolean', 'ENABLE_SPLUNK', 'true'
+            buildConfigField 'boolean', 'IS_WL_BUILD', 'true'
+            versionName "2.5"
+            versionCode 21
+            signingConfig signingConfigs.release
+            dimension "app"
+        }
+
+        blackfriday {
+            applicationId 'com.cuponation.app'
+            applicationIdSuffix 'bf'
+            resValue "string", "app_scheme", "cuponationbf"
+            buildConfigField 'boolean', 'ENABLE_SPLUNK', 'true'
+            buildConfigField 'boolean', 'IS_WL_BUILD', 'false'
+            versionName "1.0.5"
+            versionCode 6
+            signingConfig signingConfigs.release
+            dimension "app"
+        }
+
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation project(':app-instant')
+    implementation project(':app-base')
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.google.com"
+    }
+    maven {
+        url "http://maven.batch.com/release"
+    }
+    maven {
+        url "https://mint.splunk.com/gradle/"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url  "http://dl.bintray.com/jayrambhia/maven"
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
